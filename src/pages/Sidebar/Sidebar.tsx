@@ -1,10 +1,12 @@
 import React from 'react';
+import AuthVerify from "../../component/AuthVerify";
 
 const Sidebar = () => {
     return (
         <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <AuthVerify />
             {/* Sidebar - Brand */}
-            <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+            <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/public">
                 <div className="sidebar-brand-icon rotate-n-15">
                     <i className="fas fa-laugh-wink"></i>
                 </div>
@@ -15,7 +17,7 @@ const Sidebar = () => {
 
             {/* Nav Item - Dashboard */}
             <li className="nav-item active">
-                <a className="nav-link" href="/">
+                <a className="nav-link" href="/public">
                     <i className="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -37,8 +39,8 @@ const Sidebar = () => {
                 <div id="collapseTwo" className="collapsed" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div className="bg-white py-2 collapse-inner rounded">
                         <h6 className="collapse-header">Custom Components:</h6>
-                        <a className="collapse-item" href="buttons.html">Buttons</a>
-                        <a className="collapse-item" href="cards.html">Cards</a>
+                        <a className="collapse-item" href="#">#</a>
+                        <a className="collapse-item" href="#">#</a>
                     </div>
                 </div>
             </li>

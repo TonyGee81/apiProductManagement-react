@@ -1,0 +1,53 @@
+.overlay {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+
+    background-color: rgba(0, 0, 0, .6);
+    transition: opacity 1s linear;
+    z-index: 9;
+
+    /* Center vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle {
+    height: 50%;
+    width: 50%;
+
+    margin: 0 auto;
+    padding-top: 0;
+
+    z-index: 10;
+
+    /* Center vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #FFFFFF;
+
+}
+
+.text{
+    padding-left: 10px;
+}
+
+.spinner {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: conic-gradient(#0000 10%,#b5b5b5);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+    animation: spinner-zp9dbg 1s infinite linear;
+}
+
+@keyframes spinner-zp9dbg {
+    to {
+        transform: rotate(1turn);
+    }
+}
