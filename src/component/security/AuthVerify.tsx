@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import axios from "axios";
 import { useLocation } from "react-router-dom";
 
 const AuthVerify = () => {
@@ -9,17 +8,15 @@ const AuthVerify = () => {
 
 
         if (!token) {
-            delete axios.defaults.headers.common["Authorization"];
-            localStorage.removeItem('token')
             if(location.pathname !== '/')
             {
                 window.location.href = '/';
             }
         }
-    }, [location.pathname]);
+    }, [location.pathname, token]);
 
     return(
-        <>{ token && ( <button >logout</button>) }</>
+       <></>
     )
 }
 

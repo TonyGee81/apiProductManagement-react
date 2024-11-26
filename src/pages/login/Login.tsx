@@ -71,10 +71,10 @@ const Login = () => {
 
                                         <hr/>
                                         <div className="text-center">
-                                            <a className="small" href="forgot-password.html">Forgot Password?</a>
+                                            <a className="small" href="#">Forgot Password?</a>
                                         </div>
                                         <div className="text-center">
-                                            <a className="small" href="register.html">Create an Account!</a>
+                                            <a className="small" href="#">Create an Account!</a>
                                         </div>
                                     </div>
                                 </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthVerify from "../../component/security/AuthVerify";
+
 
 const Sidebar = () => {
 
@@ -13,7 +13,7 @@ const Sidebar = () => {
                 </div>
                 <div className="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
             </a>
-            <AuthVerify />
+
             <hr className="sidebar-divider my-0"/>
 
             {/* Nav Item - Dashboard */}
