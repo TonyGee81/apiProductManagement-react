@@ -1,13 +1,12 @@
 import axios, {AxiosResponse} from "axios";
 
-import {urlApi, config} from './AxiosProvider';
+import {urlApi} from "./AxiosProvider";
 const ApiPost = async (url: string, params: object) => {
 
     try {
         const response: AxiosResponse = await axios.post(
             urlApi + url,
-            params,
-            config
+            params
         );
 
         return {

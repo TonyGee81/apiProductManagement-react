@@ -3,9 +3,10 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 
 const AuthVerify = () => {
+    const token = (localStorage.getItem("token"));
     const location = useLocation();
     useEffect(() => {
-        const token = (localStorage.getItem("token"));
+
 
         if (!token) {
             delete axios.defaults.headers.common["Authorization"];
@@ -16,8 +17,9 @@ const AuthVerify = () => {
             }
         }
     }, [location.pathname]);
+
     return(
-        <></>
+        <>{ token && ( <button >logout</button>) }</>
     )
 }
 

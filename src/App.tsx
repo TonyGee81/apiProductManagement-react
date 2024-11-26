@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.min.css';
 import Login from "./pages/login/Login";
-import AdminHome from "./pages/AdminHome/AdminHome";
+import AdminHome from "./pages/adminHome/AdminHome";
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -18,8 +18,6 @@ function App() {
                     <Route path="/admin_home" element={<AdminHome />} />
                 </Routes>
             </BrowserRouter>
-
-
         </div>
 );
 }

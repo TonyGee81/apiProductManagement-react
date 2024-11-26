@@ -1,15 +1,10 @@
 import React, {useState} from 'react';
-import {SubmitHandler, useForm} from "react-hook-form";
+import {SubmitHandler, useForm, FormProvider, useFormContext} from "react-hook-form";
 import ApiPost from "../../component/axios/ApiPost";
 import {setAuthToken} from "../../helper/setAuthToken";
-import Loader from "../../component/Loader/Loader";
-
-const emailPattern = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/i;
-
-type IFormInput = {
-    login: string
-    password: string
-}
+import Loader from "../../component/loader/Loader";
+import InputEmail from "../../component/form/input/inputEmail";
+import InputPassword from "../../component/form/input/inputPassword";
 
 type TresponseApi = {
     data: { token: string },
@@ -25,7 +20,8 @@ type TresponseApi = {
 const Login = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
-    const onSubmit: SubmitHandler<IFormInput> = async (data: IFormInput) => {
+    const onSubmit = async (data: any) => {
+        console.log(data);
         setIsLoading(true);
         const auth = {
             username: data.login,
@@ -44,15 +40,9 @@ const Login = () => {
         }
     }
 
-    const {
-        register,
-        handleSubmit,
-        formState: {errors},
-    } = useForm<IFormInput>()
+    const methods = useForm()
 
     return (
-
-
         <div className="container">
             <div className="row justify-content-center">
 
@@ -67,35 +57,18 @@ const Login = () => {
                                         <div className="text-center">
                                             <h1 className="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                         </div>
-                                        <form className="user" onSubmit={handleSubmit(onSubmit)}>
-                                            {/* register your input into the hook by invoking the "register" function */}
-                                            <div className="form-group">
+                                        <FormProvider {...methods}>
+                                            <form className="user" onSubmit={methods.handleSubmit(onSubmit)}>
+                                                <InputEmail />
+                                                <InputPassword />
+                                                {isLoading ? <Loader text={'Vérification'}/> : null}
                                                 <input
-                                                    type="text" {
-                                                    ...register("login", {
-                                                        required: true,
-                                                        pattern: emailPattern
-                                                    })
-                                                }
-                                                    className="form-control form-control-user"
-                                                    placeholder="Enter Email Address..."
+                                                    type="submit"
+                                                    className="btn btn-primary btn-user btn-block"
                                                 />
-                                                {errors.login && <span>This field is required</span>}
-                                            </div>
-                                            <div className="form-group">
-                                                <input
-                                                    type="password" {...register("password", {required: true})}
-                                                    className="form-control form-control-user"
-                                                    placeholder="Password"
-                                                />
-                                                {errors.password && <span>This field is required</span>}
-                                            </div>
-                                            {isLoading ? <Loader text={'Vérification'}/> : null}
-                                            <input
-                                                type="submit"
-                                                className="btn btn-primary btn-user btn-block"
-                                            />
-                                        </form>
+                                            </form>
+                                        </FormProvider>
+
                                         <hr/>
                                         <div className="text-center">
                                             <a className="small" href="forgot-password.html">Forgot Password?</a>

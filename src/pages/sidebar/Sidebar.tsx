@@ -1,10 +1,11 @@
 import React from 'react';
-import AuthVerify from "../../component/AuthVerify";
+import AuthVerify from "../../component/security/AuthVerify";
 
 const Sidebar = () => {
+
+
     return (
         <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-            <AuthVerify />
             {/* Sidebar - Brand */}
             <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/public">
                 <div className="sidebar-brand-icon rotate-n-15">
@@ -12,7 +13,7 @@ const Sidebar = () => {
                 </div>
                 <div className="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
             </a>
-
+            <AuthVerify />
             <hr className="sidebar-divider my-0"/>
 
             {/* Nav Item - Dashboard */}
