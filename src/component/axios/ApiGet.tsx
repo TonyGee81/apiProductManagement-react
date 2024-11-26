@@ -1,22 +1,21 @@
 import axios from "axios";
 
-const variables = require('./AxiosProvider');
+import {urlApi, config} from "./AxiosProvider";
 
-const ApiGet = async (url: string) => {
+const ApiGet = async (url: string, groups: string) => {
 
     return await axios.get(
-        variables.urlApi + url,
-        variables.config
+        `${urlApi + url}?groups[]=${groups}`,
+        config,
     ).then(
         response => {
-            // Get token from response
             return response.data;
         }
     ).catch(err => {
         const errorCode = err.response ? err.response.data.code : null;
         if (errorCode === 401) {
-            delete axios.defaults.headers.common["Authorization"];
-            localStorage.removeItem('token')
+            localStorage.removeItem('token');
+            localStorage.removeItem('login');
         }
         return errorCode;
     });

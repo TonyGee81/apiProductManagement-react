@@ -5,8 +5,6 @@ const AuthVerify = () => {
     const token = (localStorage.getItem("token"));
     const location = useLocation();
     useEffect(() => {
-
-
         if (!token) {
             if(location.pathname !== '/')
             {

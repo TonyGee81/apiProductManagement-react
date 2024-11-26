@@ -4,11 +4,9 @@ import axios from "axios";
 function HasToken(){
     const token = (localStorage.getItem("token"));
     useEffect(() => {
-
-
         if (!token) {
-            delete axios.defaults.headers.common["Authorization"];
-            localStorage.removeItem('token')
+            localStorage.removeItem('token');
+            localStorage.removeItem('login');
         }
     }, [token]);
 

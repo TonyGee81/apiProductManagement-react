@@ -6,9 +6,8 @@ import AdminHome from "./pages/adminHome/AdminHome";
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Sidebar from "./component/sidebar/Sidebar";
 import AuthVerify from "./component/security/AuthVerify";
-import TopBar from "./component/topBar/topBar";
+import TopBar from "./component/topBar/TopBar";
 import HasToken from "./component/security/HasToken";
-
 
 function App() {
 

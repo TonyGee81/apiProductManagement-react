@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {SubmitHandler, useForm, FormProvider, useFormContext} from "react-hook-form";
+import {useForm, FormProvider} from "react-hook-form";
 import ApiPost from "../../component/axios/ApiPost";
 import {setAuthToken} from "../../helper/setAuthToken";
 import Loader from "../../component/loader/Loader";
@@ -21,7 +21,6 @@ const Login = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
     const onSubmit = async (data: any) => {
-        console.log(data);
         setIsLoading(true);
         const auth = {
             username: data.login,
@@ -32,7 +31,7 @@ const Login = () => {
             // Get token from response
             const token = responseApi.data.token;
             // Set token to axios common header
-            setAuthToken(token);
+            setAuthToken(token,data.login);
             // Redirect user to home page
             window.location.href = '/admin_home';
         } else {
