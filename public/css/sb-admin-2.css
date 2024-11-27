@@ -3874,6 +3874,7 @@ input[type="button"].btn-block {
 .nav-link {
     display: block;
     padding: 0.5rem 1rem;
+    cursor: pointer;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -10127,7 +10128,7 @@ a:focus {
     margin: 0 0 1rem 0;
 }
 
-.sidebar .nav-item .collapse .collapse-inner .collapse-header,
+.sidebar .nav-item .collapse-card .collapse-inner .collapse-header,
 .sidebar .nav-item .collapsing .collapse-inner .collapse-header {
     margin: 0;
     white-space: nowrap;
@@ -10138,7 +10139,7 @@ a:focus {
     color: #b7b9cc;
 }
 
-.sidebar .nav-item .collapse .collapse-inner .collapse-item,
+.sidebar .nav-item .collapse-card .collapse-inner .collapse-item,
 .sidebar .nav-item .collapsing .collapse-inner .collapse-item {
     padding: 0.5rem 1rem;
     margin: 0 0.5rem;
@@ -10149,17 +10150,17 @@ a:focus {
     white-space: nowrap;
 }
 
-.sidebar .nav-item .collapse .collapse-inner .collapse-item:hover,
+.sidebar .nav-item .collapse-card .collapse-inner .collapse-item:hover,
 .sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
     background-color: #eaecf4;
 }
 
-.sidebar .nav-item .collapse .collapse-inner .collapse-item:active,
+.sidebar .nav-item .collapse-card .collapse-inner .collapse-item:active,
 .sidebar .nav-item .collapsing .collapse-inner .collapse-item:active {
     background-color: #dddfeb;
 }
 
-.sidebar .nav-item .collapse .collapse-inner .collapse-item.active,
+.sidebar .nav-item .collapse-card .collapse-inner .collapse-item.active,
 .sidebar .nav-item .collapsing .collapse-inner .collapse-item.active {
     color: #4e73df;
     font-weight: 700;
@@ -10250,8 +10251,7 @@ a:focus {
         display: block;
         transition: height 0.15s ease;
     }
-    .sidebar .nav-item .collapse,
-    .sidebar .nav-item .collapsing {
+    .sidebar .nav-item .collapse-card{
         margin: 0 1rem;
     }
     .sidebar .nav-item .nav-link {
@@ -10269,7 +10269,7 @@ a:focus {
         font-size: 0.85rem;
         display: inline;
     }
-    .sidebar .nav-item .nav-link[data-toggle="collapse"]::after {
+    .sidebar .nav-item .nav-link[data-toggle="collapse-card"]::after {
         width: 1rem;
         text-align: center;
         float: right;
@@ -10279,7 +10279,7 @@ a:focus {
         content: '\f107';
         font-family: 'Font Awesome 5 Free';
     }
-    .sidebar .nav-item .nav-link[data-toggle="collapse"].collapsed::after {
+    .sidebar .nav-item .nav-link[data-toggle="collapse-card"].collapsed::after {
         content: '\f105';
     }
     .sidebar .sidebar-brand .sidebar-brand-icon i {
