@@ -1,6 +1,6 @@
 import axios, {AxiosResponse} from "axios";
-
 import {urlApi} from "./AxiosProvider";
+
 const ApiPost = async (url: string, params: object) => {
 
     try {

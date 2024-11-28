@@ -2,6 +2,7 @@ import React from 'react';
 import './App.min.css';
 import Login from "./pages/login/Login";
 import AdminHome from "./pages/adminHome/AdminHome";
+import ImportFile from "./pages/importFile/ImportFile";
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Sidebar from "./component/sidebar/Sidebar";
@@ -25,6 +26,7 @@ function App() {
                             <Routes>
                                 <Route path="/" element={<Login/>}/>
                                 <Route path="/admin_home" element={<AdminHome/>}/>
+                                <Route path="/import" element={<ImportFile />}/>
                             </Routes>
 
                         </div>

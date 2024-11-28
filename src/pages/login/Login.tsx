@@ -3,8 +3,8 @@ import {useForm, FormProvider} from "react-hook-form";
 import ApiPost from "../../component/axios/ApiPost";
 import {setAuthToken} from "../../helper/setAuthToken";
 import Loader from "../../component/loader/Loader";
-import InputEmail from "../../component/form/input/inputEmail";
-import InputPassword from "../../component/form/input/inputPassword";
+import InputEmail from "../../component/form/input/inputEmail/inputEmail";
+import InputPassword from "../../component/form/input/inputPassword/inputPassword";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -44,7 +44,7 @@ const Login = () => {
         }
     }
 
-    const methods = useForm()
+    const methods = useForm();
 
     return (
         <div className="container">

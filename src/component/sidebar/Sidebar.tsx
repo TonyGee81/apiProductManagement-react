@@ -9,9 +9,9 @@ const Sidebar = () => {
 
             <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/public">
                 <div className="sidebar-brand-icon rotate-n-15">
-                    <i className="fas fa-laugh-wink"></i>
+                    <i className="fas fa-box"></i>
                 </div>
-                <div className="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div className="sidebar-brand-text mx-3">Admin Products</div>
             </a>
 
             <hr className="sidebar-divider my-0"/>
@@ -30,7 +30,7 @@ const Sidebar = () => {
 
             <Section title="Import" icon="fa-upload">
                 <h6 className="collapse-header">Files</h6>
-                <a className="collapse-item" href="utilities-color.html">Products</a>
+                <a className="collapse-item" href="/import">Products</a>
             </Section>
 
 

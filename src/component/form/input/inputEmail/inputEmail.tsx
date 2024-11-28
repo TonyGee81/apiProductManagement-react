@@ -24,6 +24,7 @@ const InputEmail = () => {
                 }
                 className="form-control form-control-user"
                 placeholder="Enter Email Address..."
+                data-testid="input-email"
             />
             {errors.login && <span>This field is required</span>}
         </div>
