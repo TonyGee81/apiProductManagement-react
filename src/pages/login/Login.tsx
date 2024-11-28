@@ -5,6 +5,8 @@ import {setAuthToken} from "../../helper/setAuthToken";
 import Loader from "../../component/loader/Loader";
 import InputEmail from "../../component/form/input/inputEmail";
 import InputPassword from "../../component/form/input/inputPassword";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 type TresponseApi = {
     data: { token: string },
@@ -19,6 +21,7 @@ type TresponseApi = {
 
 const Login = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
+    const errorLogin = () => toast.error("Erreur de connexion", {theme: "colored",});
 
     const onSubmit = async (data: any) => {
         setIsLoading(true);
@@ -28,6 +31,7 @@ const Login = () => {
         }
         const responseApi: TresponseApi = await ApiPost('/login_check', auth);
         if (responseApi?.status === 200) {
+            setIsLoading(false);
             // Get token from response
             const token = responseApi.data.token;
             // Set token to axios common header
@@ -36,6 +40,7 @@ const Login = () => {
             window.location.href = '/admin_home';
         } else {
             setIsLoading(false);
+            errorLogin();
         }
     }
 
@@ -44,7 +49,7 @@ const Login = () => {
     return (
         <div className="container">
             <div className="row justify-content-center">
-
+                <ToastContainer />
                 <div className="col-xl-10 col-lg-12 col-md-9">
 
                     <div className="card o-hidden border-0 shadow-lg my-5">
