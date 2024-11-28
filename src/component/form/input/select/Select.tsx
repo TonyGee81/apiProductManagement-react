@@ -22,7 +22,7 @@ const Select: React.FC<SelectProps> = ({
     const {
         register,
     } = useFormContext();
-    const empty = [{ '...': '...'}];
+    
     return (
         <div className="form-group">
             {loadingData && <Loader text="loading"/>}

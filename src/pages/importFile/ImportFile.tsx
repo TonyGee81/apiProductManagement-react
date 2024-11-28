@@ -2,6 +2,8 @@ import React, {useEffect, useState} from "react";
 import {useForm, FormProvider} from "react-hook-form";
 import Select from "../../component/form/input/select/Select";
 import ApiGet from "../../component/axios/ApiGet";
+import InputFile from "../../component/form/input/file/InputFile";
+import InputSubmit from "../../component/form/input/inputSubmit/InputSubmit";
 
 type Tdata = {
     items: Array<{ id: string; name: string }>,
@@ -14,10 +16,10 @@ const ImportFile = () => {
     const [loadingData, setDataLoading] = useState(false);
     const [suppliers, setSuppliers] = useState({});
     const onSubmit = () => {
-
+        console.log('SEND');
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         setDataLoading(true);
         const api = ApiGet('/suppliers', 'show_supplier');
 
@@ -27,7 +29,7 @@ const ImportFile = () => {
 
         })
 
-    },[]);
+    }, []);
 
     return (
         <div className="container">
@@ -37,9 +39,11 @@ const ImportFile = () => {
                 </div>
                 <div className="card-body">
                     <FormProvider {...methods}>
-                    <form onSubmit={methods.handleSubmit(onSubmit)}>
-                        <Select data={suppliers} loadingData={loadingData} name="supplier" />
-                    </form>
+                        <form onSubmit={methods.handleSubmit(onSubmit)}>
+                            <Select data={suppliers} loadingData={loadingData} name="supplier"/>
+                            <InputFile/>
+                            <InputSubmit cssClass="btn btn-primary btn-user btn-block"/>
+                        </form>
                     </FormProvider>
                 </div>
             </div>

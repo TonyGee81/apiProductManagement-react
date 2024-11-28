@@ -4,6 +4,7 @@ import ApiPost from "../../component/axios/ApiPost";
 import {setAuthToken} from "../../helper/setAuthToken";
 import Loader from "../../component/loader/Loader";
 import InputEmail from "../../component/form/input/inputEmail/inputEmail";
+import InputSubmit from "../../component/form/input/inputSubmit/InputSubmit";
 import InputPassword from "../../component/form/input/inputPassword/inputPassword";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -66,10 +67,7 @@ const Login = () => {
                                                 <InputEmail />
                                                 <InputPassword />
                                                 {isLoading ? <Loader text={'Vérification'}/> : null}
-                                                <input
-                                                    type="submit"
-                                                    className="btn btn-primary btn-user btn-block"
-                                                />
+                                                <InputSubmit cssClass="btn btn-primary btn-user btn-block" />
                                             </form>
                                         </FormProvider>
 
