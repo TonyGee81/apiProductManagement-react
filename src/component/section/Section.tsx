@@ -2,22 +2,17 @@ import React, {ReactNode} from 'react';
 import {useCollapse} from 'react-collapsed';
 
 type SectionProps = {
-    defaultExpanded?: boolean;
-    collapsedHeight?: number;
     icon: string;
     title: string;
     children: ReactNode;
 };
 
 const Section: React.FC<SectionProps> = ({
-                                             defaultExpanded = false,
-                                             collapsedHeight = 0,
                                              icon,
                                              title,
                                              children,
                                          }) => {
-    const config = {defaultExpanded, collapsedHeight};
-    const {getCollapseProps, getToggleProps, isExpanded} = useCollapse(config);
+    const {getCollapseProps, getToggleProps, isExpanded} = useCollapse();
 
     return (
         <div className="collapsible nav-item">
