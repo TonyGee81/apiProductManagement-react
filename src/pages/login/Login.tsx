@@ -30,7 +30,7 @@ const Login = () => {
             username: data.login,
             password: data.password
         }
-        const responseApi: TresponseApi = await ApiPost('/login_check', auth);
+        const responseApi: TresponseApi = await ApiPost('/login_check', auth, {});
         if (responseApi?.status === 200) {
             setIsLoading(false);
             // Get token from response

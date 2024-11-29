@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import ApiGet from "../axios/ApiGet";
 import Loader from "../loader/Loader";
+import {token} from "../axios/AxiosProvider";
 
 const TopBar = () => {
 
@@ -21,7 +22,9 @@ const TopBar = () => {
 
     useEffect(()=>{
         setIsLoading(true);
-        const api = ApiGet('/user/current', 'show_user');
+        const api = ApiGet('/user/current', 'show_user', {
+            Authorization: `Bearer ${token}`,
+        });
         api.then((data: Tdata) => {
             setIsLoading(false);
             setUserInfo({

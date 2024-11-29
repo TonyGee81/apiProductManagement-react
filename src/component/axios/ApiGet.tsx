@@ -1,12 +1,14 @@
 import axios from "axios";
 
-import {urlApi, config} from "./AxiosProvider";
+import {urlApi} from "./AxiosProvider";
 
-const ApiGet = async (url: string, groups: string) => {
+const ApiGet = async (url: string, groups: string, headers: object) => {
 
     return await axios.get(
         `${urlApi + url}?groups[]=${groups}`,
-        config,
+        {
+            headers: headers
+        },
     ).then(
         response => {
             return response.data;
