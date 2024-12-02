@@ -1,14 +1,26 @@
 import axios, {AxiosResponse} from "axios";
-import {urlApi} from "./AxiosProvider";
+import {token, urlApi} from "./AxiosProvider";
 
-const ApiPost = async (url: string, params: object, headers: object) => {
+const ApiPost = async (url: string, params: object, headers: null|object= null ) => {
+
+    let requestHeaders = {};
+
+    if(headers)
+    {
+        requestHeaders = { ...requestHeaders, headers}
+    }
+
+    if(token)
+    {
+        requestHeaders = { ...requestHeaders, Authorization: `Bearer ${token}`}
+    }
 
     try {
         const response: AxiosResponse = await axios.post(
             urlApi + url,
             params,
             {
-                headers: headers
+                headers: requestHeaders
             },
         );
 
@@ -22,6 +34,7 @@ const ApiPost = async (url: string, params: object, headers: object) => {
             if (err.response.data.code === 401) {
                 delete axios.defaults.headers.common["Authorization"];
                 localStorage.removeItem('token');
+                window.location.href = '/';
             }
 
             return {

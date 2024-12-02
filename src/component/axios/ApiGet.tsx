@@ -1,13 +1,25 @@
 import axios from "axios";
+import {urlApi, token} from "./AxiosProvider";
 
-import {urlApi} from "./AxiosProvider";
+const ApiGet = async (url: string, groups: string, headers: null|object= null ) => {
 
-const ApiGet = async (url: string, groups: string, headers: object) => {
+    let requestHeaders = {};
+
+    if(headers)
+    {
+        requestHeaders = { ...requestHeaders, headers}
+    }
+
+    if(token)
+    {
+        requestHeaders = { ...requestHeaders, Authorization: `Bearer ${token}`}
+        //axios.defaults.headers.get['Authorization'] = `Bearer ${token}`;
+    }
 
     return await axios.get(
         `${urlApi + url}?groups[]=${groups}`,
         {
-            headers: headers
+            headers: requestHeaders
         },
     ).then(
         response => {
@@ -18,6 +30,7 @@ const ApiGet = async (url: string, groups: string, headers: object) => {
         if (errorCode === 401) {
             localStorage.removeItem('token');
             localStorage.removeItem('login');
+            window.location.href = '/';
         }
         return errorCode;
     });

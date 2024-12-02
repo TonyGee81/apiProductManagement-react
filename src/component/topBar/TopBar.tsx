@@ -22,9 +22,7 @@ const TopBar = () => {
 
     useEffect(()=>{
         setIsLoading(true);
-        const api = ApiGet('/user/current', 'show_user', {
-            Authorization: `Bearer ${token}`,
-        });
+        const api = ApiGet('/user/current', 'show_user');
         api.then((data: Tdata) => {
             setIsLoading(false);
             setUserInfo({

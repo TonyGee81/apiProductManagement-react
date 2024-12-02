@@ -30,7 +30,12 @@ const Sidebar = () => {
 
             <Section title="Import" icon="fa-upload">
                 <h6 className="collapse-header">Files</h6>
-                <a className="collapse-item" href="/import">Products</a>
+                <a className="collapse-item" href="/import">Produits</a>
+            </Section>
+
+            <Section title="Gestions" icon="fa-warehouse">
+                <h6 className="collapse-header">Produits</h6>
+                <a className="collapse-item" href="/products/show">Produits</a>
             </Section>
 
 

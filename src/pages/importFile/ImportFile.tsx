@@ -28,7 +28,6 @@ const ImportFile = () => {
                 "supplier": data.supplier
             },
             {
-                Authorization: `Bearer ${token}`,
                 'Content-Type': 'multipart/form-data'
             }
         );
@@ -46,9 +45,7 @@ const ImportFile = () => {
 
     useEffect(() => {
         setDataLoading(true);
-        const apiGetSuppliers = ApiGet('/suppliers', 'show_supplier', {
-            Authorization: `Bearer ${token}`,
-        });
+        const apiGetSuppliers = ApiGet('/suppliers', 'show_supplier');
 
         apiGetSuppliers.then((data: Tdata) => {
             setDataLoading(false);
