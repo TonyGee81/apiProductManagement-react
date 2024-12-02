@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import ApiGet from "../axios/ApiGet";
 import Loader from "../loader/Loader";
-import {token} from "../axios/AxiosProvider";
 
 const TopBar = () => {
 

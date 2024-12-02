@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 
 interface OptionProps {
     data: Object;
@@ -8,7 +8,7 @@ interface DataOption {
     [key: string]: { value: string; label: string };
 }
 
-const Option: React.FC<OptionProps> = ({ data }) => {
+const Option: React.FC<OptionProps> = ({data}) => {
     const [dataOption, setDataOption] = useState<DataOption>({});
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const Option: React.FC<OptionProps> = ({ data }) => {
                 ...prevState,
                 ...Object.entries(data).reduce((accumulator, [, value]) => {
                     // @ts-ignore
-                    accumulator[value.id] = { value: value.id, label: value.name };
+                    accumulator[value.id] = {value: value.id, label: value.name};
                     return accumulator;
                 }, {}),
             }));
