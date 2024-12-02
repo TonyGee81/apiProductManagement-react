@@ -9,6 +9,8 @@ import Sidebar from "./component/sidebar/Sidebar";
 import AuthVerify from "./component/security/AuthVerify";
 import TopBar from "./component/topBar/TopBar";
 import HasToken from "./component/security/HasToken";
+import ProductShow from "./pages/product/productShow";
+import ProductsShow from "./pages/product/productsShow";
 
 function App() {
 
@@ -27,6 +29,9 @@ function App() {
                                 <Route path="/" element={<Login/>}/>
                                 <Route path="/admin_home" element={<AdminHome/>}/>
                                 <Route path="/import" element={<ImportFile />}/>
+                                <Route path="/products/show" element={<ProductsShow />}/>
+                                <Route path="/product/show" element={<ProductShow />}/>
+                                <Route path="/product/edit" element={<ProductShow />}/>
                             </Routes>
 
                         </div>
