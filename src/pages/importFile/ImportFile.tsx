@@ -5,7 +5,6 @@ import ApiGet from "../../component/axios/ApiGet";
 import InputFile from "../../component/form/input/file/InputFile";
 import InputSubmit from "../../component/form/input/inputSubmit/InputSubmit";
 import ApiPost from "../../component/axios/ApiPost";
-import {token} from "../../component/axios/AxiosProvider";
 import Loader from "../../component/loader/Loader";
 import {ToastContainer, toast} from 'react-toastify';
 
@@ -66,7 +65,7 @@ const ImportFile = () => {
                 <div className="card-body">
                     <FormProvider {...methods}>
                         <form onSubmit={methods.handleSubmit(onSubmit)}>
-                            <Select data={suppliers} name="supplier" require={true}/>
+                            <Select data={suppliers} name="supplier" require={true} createElement={true}/>
                             <InputFile require={true}/>
                             <InputSubmit cssClass="btn btn-primary btn-user btn-block"/>
                         </form>

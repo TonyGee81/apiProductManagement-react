@@ -11,6 +11,7 @@ import TopBar from "./component/topBar/TopBar";
 import HasToken from "./component/security/HasToken";
 import ProductShow from "./pages/product/productShow";
 import ProductsShow from "./pages/product/productsShow";
+import ProductEdit from "./pages/product/productEdit";
 
 function App() {
 
@@ -31,7 +32,8 @@ function App() {
                                 <Route path="/import" element={<ImportFile />}/>
                                 <Route path="/products/show" element={<ProductsShow />}/>
                                 <Route path="/product/show" element={<ProductShow />}/>
-                                <Route path="/product/edit" element={<ProductShow />}/>
+                                <Route path="/products/show" element={<ProductShow />}/>
+                                <Route path="/product/edit/:productId" element={<ProductEdit />}/>
                             </Routes>
 
                         </div>

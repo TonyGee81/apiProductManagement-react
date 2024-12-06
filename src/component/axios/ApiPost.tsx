@@ -7,7 +7,7 @@ const ApiPost = async (url: string, params: object, headers: null|object= null )
 
     if(headers)
     {
-        requestHeaders = { ...requestHeaders, headers}
+        requestHeaders = { ...requestHeaders, ...headers}
     }
 
     if(token)

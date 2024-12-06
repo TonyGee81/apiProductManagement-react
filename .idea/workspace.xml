@@ -7,14 +7,17 @@
     <list default="true" id="9ee4d125-9ed4-4c54-ae29-cdeb2905dd4a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/sb-admin-2.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/sb-admin-2.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/axios/ApiGet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/axios/ApiGet.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/axios/ApiPost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/axios/ApiPost.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/form/input/option/Option.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/form/input/option/Option.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/form/input/select/Select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/form/input/select/Select.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/sidebar/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/sidebar/Sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/importFile/ImportFile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/importFile/ImportFile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/product/productEdit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/productEdit.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/product/productsShow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/productsShow.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,22 +52,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jsx.switch.disabled&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/anthonygirard/Sites/TESTS/docker/api/www/src&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/anthonygirard/Sites/TESTS/docker/api/www/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "jsx.switch.disabled": "true",
+    "last_opened_file_path": "/Users/anthonygirard/Sites/TESTS/docker/api/www/src",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Users/anthonygirard/Sites/ApiProductManagement/www/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />

@@ -27,12 +27,12 @@ const ApiGet = async (url: string, groups: string, headers: null|object= null ) 
         }
     ).catch(err => {
         const errorCode = err.response ? err.response.data.code : null;
-        if (errorCode === 401) {
+        if (err.response.data.code === 401) {
             localStorage.removeItem('token');
             localStorage.removeItem('login');
             window.location.href = '/';
         }
-        return errorCode;
+        return err.response.data;
     });
 
 }

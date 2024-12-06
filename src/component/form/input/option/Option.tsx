@@ -2,13 +2,14 @@ import React, {useEffect, useState} from "react";
 
 interface OptionProps {
     data: Object;
+    createElement: boolean;
 }
 
 interface DataOption {
     [key: string]: { value: string; label: string };
 }
 
-const Option: React.FC<OptionProps> = ({data}) => {
+const Option: React.FC<OptionProps> = ({data, createElement}) => {
     const [dataOption, setDataOption] = useState<DataOption>({});
 
     useEffect(() => {
@@ -28,11 +29,18 @@ const Option: React.FC<OptionProps> = ({data}) => {
 
     return (
         <>
+            { createElement && (
+                <option value="...">
+                    ...
+                </option>
+            )}
+
             {Object.entries(dataOption).map(([key, option], index) => (
-                <option key={index} value={option.value}>
-                    {option.label}
+                <option key={key} value={option.value}>
+                    {option.label} {key}
                 </option>
             ))}
+
         </>
     );
 };
